@@ -10,14 +10,7 @@ Este repositorio contiene la implementación de tres juegos clásicos desarrolla
 2. Ejecuta:
 
 ```bash
-xhost +local:root
-docker run -it --rm \
-  -e DISPLAY=$DISPLAY \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v $XDG_RUNTIME_DIR/pulse/native:/run/pulse/native \
-  -e PULSE_SERVER=unix:/run/pulse/native \
-  -v ~/.config/pulse/cookie:/root/.config/pulse/cookie \
-  julianse27/<nombre_del_juego>
+docker start juego_<nombre_del_juego>_local
 ```
 
 Reemplaza `<nombre_del_juego>` por:
@@ -138,6 +131,9 @@ El jugador controla una nave espacial ubicada en la parte inferior de la pantall
 
 7. **Fin del juego**:  
    Al perder toda la vida, se muestra el puntaje final y se permite reiniciar o salir.
+---
+# Imagen
+![imagen](https://github.com/user-attachments/assets/d6081dbf-f1c8-455e-9d5b-c884af2ef7f8)
 
 ---
 
@@ -194,6 +190,10 @@ Matriz de texto que define la posición de muros (`1`) y caminos libres (`0`). C
 3. **Disparo**: Al disparar, se lanza una bala que se detiene con muros o al impactar al oponente.
 4. **Colisión**: Si una bala impacta al enemigo, se reduce su salud.
 5. **Ganador**: El primer tanque en destruir al otro gana. Se muestra en pantalla y se puede reiniciar presionando `R`.
+
+---
+# Imagen
+![imagen](https://github.com/user-attachments/assets/3ca2b9c2-39ac-4d4a-8721-0e93bfe33dab)
 
 ---
 
@@ -313,7 +313,10 @@ Las piezas están definidas en formato de cadena (`PIECES`), incluyendo I, O, T,
 7. Se puede pausar y reiniciar el juego en cualquier momento.
 
 ---
+# Imagen
+![imagen](https://github.com/user-attachments/assets/9cbad09e-2f00-4569-a0bf-80866b5e925f)
 
+---
 
 # 🐳 Repositorios en DockerHub
 
